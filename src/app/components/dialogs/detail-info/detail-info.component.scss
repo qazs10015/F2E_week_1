@@ -1,0 +1,38 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.pictureBox {
+  img {
+    width: 60%;
+  }
+}
+.description {
+  padding: 10px;
+  color: #909090;
+}
+.info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .infoGroup {
+    display: flex;
+    flex-direction: column;
+    .infoItem {
+      margin: 5px 10px;
+      a {
+        color: black;
+        // text-decoration: none;
+        outline: none;
+      }
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+  .webSite {
+    font-size: 20px;
+    align-self: end;
+  }
+}

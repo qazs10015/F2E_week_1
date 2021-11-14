@@ -1,0 +1,172 @@
+<!-- 觀光 start -->
+<div class="categoryBar">
+  <div class="title">
+    <img src="/assets/images/icons/travel_icon.png" alt="無法顯示來源圖片" />
+    <span>游！觀光</span>
+  </div>
+  <div class="more">
+    <a [routerLink]="'/travel'" class="travel">瀏覽更多觀光景點 >></a>
+  </div>
+</div>
+<div class="travelDetail">
+  <div class="carousel">
+    <swiper
+      [zoom]="true"
+      [autoplay]="{
+        delay: 2500,
+        disableOnInteraction: false
+      }"
+      [pagination]="{
+        clickable: true
+      }"
+      [direction]="'vertical'"
+      [slidesPerView]="1"
+      class="mySwiper"
+    >
+      <ng-container *ngFor="let item of lstTravel">
+        <ng-template swiperSlide>
+          <img
+            (click)="openDetail(item)"
+            class="pointer"
+            [src]="item.Picture.PictureUrl1"
+            alt="無法顯示來源圖片"
+            *ngIf="item.Picture.PictureUrl1; else notFound"
+          />
+          <ng-template #notFound>
+            <span class="notFound">
+              <i class="far fa-image"></i>
+              <div>Image Not Found</div>
+            </span>
+          </ng-template>
+          <!-- <div
+            class="swiper-zoom-container"
+          >
+
+          </div> -->
+          <div class="location">
+            <span class="travel"><i class="fas fa-map-marker-alt"></i></span>
+            {{ item.City }}
+            {{ item.Name }}
+          </div>
+        </ng-template>
+      </ng-container>
+    </swiper>
+  </div>
+</div>
+<!-- 觀光 end-->
+<!--  美食 start -->
+<div class="categoryBar">
+  <div class="title">
+    <img src="/assets/images/icons/food_icon.png" alt="無法顯示來源圖片" />
+    <span>吃！美食</span>
+  </div>
+  <div class="more">
+    <a [routerLink]="'/food'" class="food">瀏覽更多在地美食 >></a>
+  </div>
+</div>
+
+<div class="foodDetail">
+  <ng-container *ngFor="let item of lstFood">
+    <div class="foodBox pointer">
+      <div class="foodPicBox">
+        <img
+          (click)="openDetail(item)"
+          [src]="item.Picture.PictureUrl1"
+          alt="無法顯示來源圖片"
+          *ngIf="item.Picture.PictureUrl1; else notFound"
+        />
+        <ng-template #notFound>
+          <span class="notFound">
+            <i class="far fa-image"></i>
+            <div>Image Not Found</div>
+          </span>
+        </ng-template>
+      </div>
+      <div class="foodDetailBox">
+        <div class="top">
+          <div class="foodInfo">
+            {{ item.Name }}
+          </div>
+          <div class="foodInfo food">
+            {{ item.Class }}
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="foodInfo">
+            <div class="food"><i class="fas fa-map-marker-alt"></i></div>
+            <address>{{ item.Address }}</address>
+          </div>
+          <div class="foodInfo">
+            <div class="food"><i class="fas fa-clock"></i></div>
+            <span>{{ item.OpenTime }}</span>
+          </div>
+          <div class="foodInfo">
+            <div class="food"><i class="fas fa-phone"></i></div>
+            <a [href]="'tel:' + item.Phone">{{ item.Phone }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<!--  美食 end -->
+
+<!--  活動 start -->
+<div class="categoryBar">
+  <div class="title">
+    <img src="/assets/images/icons/event_icon.png" alt="無法顯示來源圖片" />
+    <span>玩！活動</span>
+  </div>
+  <div class="more">
+    <a [routerLink]="'/event'" class="event">瀏覽更多主題活動 >></a>
+  </div>
+</div>
+<div class="eventDetail">
+  <swiper
+    [zoom]="true"
+    [autoplay]="{
+      delay: 4000,
+      disableOnInteraction: false
+    }"
+    [slidesPerView]="4"
+    class="mySwiper"
+  >
+    <ng-container *ngFor="let item of lstActivity">
+      <ng-template swiperSlide>
+        <div class="eventBox pointer">
+          <div class="eventPicBox">
+            <img
+              (click)="openDetail(item)"
+              [src]="item.Picture.PictureUrl1"
+              alt="無法顯示來源圖片"
+              *ngIf="item.Picture.PictureUrl1; else notFound"
+            />
+            <ng-template #notFound>
+              <span class="notFound">
+                <i class="far fa-image"></i>
+                <div>Image Not Found</div>
+              </span>
+            </ng-template>
+          </div>
+          <div class="eventDetailBox">
+            <div class="dateRange">
+              {{ item.StartTime | date: "yyyy/MM/dd" }} ~
+              {{ item.EndTime | date: "yyyy/MM/dd" }}
+            </div>
+            <div>{{ item.Name }}</div>
+            <div class="address">
+              <span class="event"><i class="fas fa-map-marker-alt"></i></span>
+              {{ item.Address }}
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </swiper>
+</div>
+<!-- <div class="arrow">
+  <span class="event"><i class="fas fa-arrow-circle-left"></i></span>
+  <span class="event"><i class="fas fa-arrow-circle-right"></i></span>
+</div> -->
+<!--  活動 end -->

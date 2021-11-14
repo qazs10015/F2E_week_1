@@ -1,0 +1,13 @@
+<div class="searchBar">
+  <input
+    #searchKeyword
+    type="text"
+    placeholder="輸入想出遊的地點"
+    (keyup.enter)="search()"
+    [(ngModel)]="keyword"
+    (click)="searchKeyword.select()"
+  />
+  <div class="pointer" (click)="search()">
+    <i class="fas fa-search"></i>
+  </div>
+</div>

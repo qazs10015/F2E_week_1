@@ -1,0 +1,47 @@
+<div class="categoryBar">
+  <div class="title">
+    <img
+      src="../../../assets/images/icons/travel_icon.png"
+      alt="travel_icon.png"
+    />
+    <span>游！觀光</span>
+  </div>
+</div>
+
+<div class="serachResult">
+  <div
+    (click)="openDetail(item)"
+    class="pictureBox pointer"
+    *ngFor="
+      let item of lstData
+        | paginate: { itemsPerPage: 12, currentPage: currentPage }
+    "
+  >
+    <img
+      [src]="item.Picture.PictureUrl1"
+      alt="無法顯示來源圖片"
+      *ngIf="item.Picture.PictureUrl1; else notFound"
+    />
+    <ng-template #notFound>
+      <div class="notFound">
+        <i class="far fa-image"></i>
+        <p>Image Not Found</p>
+      </div>
+    </ng-template>
+    <div class="location">
+      <span class="red"><i class="fas fa-map-marker-alt"></i></span>
+      <span [ngClass]="{ lightgray: !item.Picture.PictureUrl1 }"
+        >{{ item.City }} {{ item.Name }}</span
+      >
+    </div>
+  </div>
+</div>
+
+<div class="paginitor">
+  <pagination-controls
+    (pageChange)="currentPage = $event"
+    [maxSize]="10"
+    [previousLabel]="''"
+    [nextLabel]="''"
+  ></pagination-controls>
+</div>

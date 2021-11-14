@@ -1,0 +1,20 @@
+<ng-container *ngFor="let category of categoryList">
+  <div class="category">
+    <i class="fas fa-map-marker-alt marker"></i>
+    <span>{{ category.categoryName }}</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="items">
+    <ul>
+      <li
+        [ngClass]="{ active: cityEName === city.en }"
+        class="pointer"
+        *ngFor="let city of category.citys"
+        [title]="city.en"
+        (click)="search(city.en)"
+      >
+        {{ city.zhtw }}
+      </li>
+    </ul>
+  </div>
+</ng-container>

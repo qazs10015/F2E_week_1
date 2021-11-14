@@ -1,0 +1,72 @@
+<div mat-dialog-title class="title">
+  <h2>{{ data.Name }}</h2>
+  <h1 class="pointer" mat-dialog-close><i class="fas fa-times"></i></h1>
+</div>
+<mat-dialog-content>
+  <div class="pictureBox">
+    <swiper [slidesPerView]="1" class="mySwiper">
+      <ng-container *ngFor="let item of data.Picture">
+        <ng-template swiperSlide>
+          <img
+            [src]="item.Picture"
+            alt="detailPicture"
+            *ngIf="item.Picture; else notFound"
+          />
+          <ng-template #notFound>
+            <span class="notFound">
+              <i class="far fa-image"></i>
+              <div>Image Not Found</div>
+            </span>
+          </ng-template>
+        </ng-template>
+      </ng-container>
+    </swiper>
+  </div>
+  <div class="description">
+    <span [innerHTML]="data.Description"></span>
+  </div>
+  <div *ngIf="data?.TravelInfo">
+    <div class="blue">交通資訊：</div>
+    <div class="description black" [innerHTML]="data.TravelInfo"></div>
+  </div>
+  <div class="info"></div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="info">
+    <div class="infoGroup">
+      <div class="infoItem">
+        <!-- 景點名搜尋 -->
+        <!-- <a
+        href="https://www.google.com.tw/maps/?q={{ data.Address }}"
+        target="_blank"
+      >
+        <span class="red"><i class="fas fa-map-marker-alt"></i></span>
+        {{ data.City }}
+        {{ data.Address }}
+      </a> -->
+        <!-- 經緯度搜尋 -->
+        <a
+          href="https://www.google.com.tw/maps/search/?api=1&query={{
+            data.Position.PositionLat
+          }},{{ data.Position.PositionLon }}"
+          target="_blank"
+        >
+          <span class="red"><i class="fas fa-map-marker-alt"></i></span>
+          {{ data.City }}
+          {{ data.Address }}
+        </a>
+      </div>
+      <div class="infoItem">
+        <span class="red"><i class="fas fa-phone"></i></span>
+        <a [href]="'tel:' + data.Phone">{{ data.Phone }}</a>
+      </div>
+      <div class="infoItem">
+        <span class="red"><i class="fas fa-clock"></i></span>
+        {{ data.OpenTime }}
+      </div>
+    </div>
+    <div class="webSite pointer" *ngIf="data?.WebsiteUrl">
+      <a [href]="data.WebsiteUrl" target="_black" class="food">前往網站</a>
+    </div>
+  </div>
+</mat-dialog-actions>

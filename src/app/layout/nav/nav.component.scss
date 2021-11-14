@@ -1,0 +1,37 @@
+/* Top Nav */
+
+.topNav {
+  border-bottom: 2px solid rgba(73, 207, 205, 0.4);
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    // margin-left: 15px;
+  }
+  .action {
+    a {
+      margin-right: 15px;
+      width: 56px;
+      height: 53px;
+      display: inline-block;
+    }
+    .travel {
+      background-image: url("../../../assets/images/icons/travel.png");
+    }
+    .travel.active {
+      background-image: url("../../../assets/images/icons/travel_active.png");
+    }
+    .food {
+      background-image: url("../../../assets/images/icons/food.png");
+    }
+    .food.active {
+      background-image: url("../../../assets/images/icons/food_active.png");
+    }
+    .event {
+      background-image: url("../../../assets/images/icons/event.png");
+    }
+    .event.active {
+      background-image: url("../../../assets/images/icons/event_active.png");
+    }
+  }
+}

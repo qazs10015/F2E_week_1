@@ -1,0 +1,63 @@
+.notFound {
+  color: lightgray;
+  font-size: 20px;
+  border-radius: 8px;
+  width: 259px;
+  height: 220px;
+  text-align: center;
+  i {
+    font-size: 165px;
+  }
+  p {
+    text-align: center;
+  }
+}
+.categoryBar {
+  margin: 27px 24px 19px 0;
+  display: flex;
+  justify-content: space-between;
+  .title {
+    span {
+      font-size: 28px;
+      color: #4b4b4b;
+      margin-left: 10px;
+    }
+  }
+  .more {
+    align-self: center;
+    a {
+      text-decoration: none;
+      font-family: "Noto Sans TC Thin";
+      font-size: 14px;
+    }
+  }
+}
+.serachResult {
+  width: 73vw;
+  max-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  .pictureBox {
+    position: relative;
+    margin: 10px;
+    img {
+      border-radius: 8px;
+      width: 259px;
+      height: 220px;
+    }
+    .location {
+      z-index: 100;
+      position: absolute;
+      bottom: 10px;
+      left: 5px;
+      color: white;
+      span {
+        margin: 5px;
+      }
+    }
+  }
+}
+.paginitor {
+  width: 100%;
+  text-align: center;
+}
