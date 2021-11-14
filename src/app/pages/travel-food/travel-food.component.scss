@@ -32,28 +32,32 @@
     }
   }
 }
-.serachResult {
-  width: 73vw;
+.searchResultContainer {
   display: flex;
-  flex-wrap: wrap;
-  .pictureBox {
-    position: relative;
-    margin: 10px;
-    width: 259px;
-    height: 220px;
-    img {
-      border-radius: 8px;
-      width: 100%;
-      height: 100%;
-    }
-    .location {
-      z-index: 100;
-      position: absolute;
-      bottom: 10px;
-      left: 5px;
-      color: white;
-      span {
-        margin: 5px;
+  justify-content: center;
+  .serachResult {
+    width: 1150px;
+    display: flex;
+    flex-wrap: wrap;
+    .pictureBox {
+      position: relative;
+      margin: 10px;
+      width: 259px;
+      height: 220px;
+      img {
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+      }
+      .location {
+        z-index: 100;
+        position: absolute;
+        bottom: 10px;
+        left: 5px;
+        color: white;
+        span {
+          margin: 5px;
+        }
       }
     }
   }
