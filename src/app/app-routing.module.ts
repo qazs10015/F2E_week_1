@@ -11,10 +11,11 @@ const routes: Routes = [
   { path: 'travel', component: TravelComponent },
   { path: 'food', component: TravelFoodComponent },
   { path: 'event', component: TravelEventComponent },
+  { path: '*', component: HomeComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

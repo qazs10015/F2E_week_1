@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log('home');
     // 合併所有城市資料
     const lstCity = categoryList.map(city => city.citys.map(item => item.en)).reduce((accumulator, value) => accumulator.concat(value), []);
     // 隨機一個英文城市名
