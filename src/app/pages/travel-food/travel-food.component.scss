@@ -34,16 +34,17 @@
 }
 .serachResult {
   width: 73vw;
-  max-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   .pictureBox {
     position: relative;
     margin: 10px;
+    width: 259px;
+    height: 220px;
     img {
       border-radius: 8px;
-      width: 259px;
-      height: 220px;
+      width: 100%;
+      height: 100%;
     }
     .location {
       z-index: 100;
