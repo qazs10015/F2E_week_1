@@ -9,6 +9,7 @@
 
 ### 參賽資料：[Finnnnnn](https://2021.thef2e.com/users/6296427084285739198?week=1&type=1)、[figma 設計稿](https://www.figma.com/file/qZkkIGFTPwi0dcXXx9IR5o/YO!-Taiwan!?node-id=0%3A1)
 
+## 網站簡介
 #### 首頁載入會隨機取不同城市的資料，如果沒有圖片會顯示沒圖片的 icon
 #### search Bar、點選城市都是取對應的景點資料
 #### 如果需要看美食、主題活動可以點選對應的 icon 或是瀏覽更多進行導頁
