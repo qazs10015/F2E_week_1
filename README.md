@@ -3,7 +3,7 @@
 
 [Demo](https://qazs10015.github.io/f2e-week1/#/home)
 
-開發框架： Angualr
+開發框架： Angular
 
  其他套件：[Angualr Material](https://material.angular.io/)、[swiper](https://swiperjs.com/)、[ngx-pagination](https://www.npmjs.com/package/ngx-pagination)、[jssha(加密套件)](https://github.com/Caligatio/jsSHA)
 
