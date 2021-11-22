@@ -9,6 +9,13 @@
 
 資料來源：[TDX 運輸資料流通服務](https://tdx.transportdata.tw/api-service/swagger)
 
+## 執行專案
+```
+git clone https://github.com/qazs10015/f2e-week1.git
+npm install
+npm start
+```
+
 ## UI組設計師資料
 
 [Finnnnnn](https://2021.thef2e.com/users/6296427084285739198?week=1&type=1)、[figma 設計稿](https://www.figma.com/file/qZkkIGFTPwi0dcXXx9IR5o/YO!-Taiwan!?node-id=0%3A1)
