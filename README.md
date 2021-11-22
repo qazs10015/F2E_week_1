@@ -1,7 +1,7 @@
 # 六角學院第三屆精神時光屋-第一週
 ## 前端個人組
 
-[Demo](https://qazs10015.github.io/f2e-week1/#/home?target=_blank)
+[Demo](https://qazs10015.github.io/f2e-week1/#/home){:target="_blank"}
 
 開發框架： Angular
 
