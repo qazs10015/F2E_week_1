@@ -7,6 +7,8 @@
 
  其他套件：[Angualr Material](https://material.angular.io/)、[swiper](https://swiperjs.com/)、[ngx-pagination](https://www.npmjs.com/package/ngx-pagination)、[jssha(加密套件)](https://github.com/Caligatio/jsSHA)
 
+資料來源：[TDX 運輸資料流通服務](https://tdx.transportdata.tw/api-service/swagger)
+
 ## UI組設計師資料
 
 [Finnnnnn](https://2021.thef2e.com/users/6296427084285739198?week=1&type=1)、[figma 設計稿](https://www.figma.com/file/qZkkIGFTPwi0dcXXx9IR5o/YO!-Taiwan!?node-id=0%3A1)
